@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+//Dark:
+$background-dark: #23222a;
+$background-dark-in: #353342;
+$text-light: #fefdfd;
+//light:
+$background-light: #f4ee8a;
+$background-light-in: #fefefe;
+$text-dark: #3d4257;
+
+//SASS:
+$family-font: 'Roboto';
+$shadow: 0px 1px 7px rgba(0, 0, 0, 0.6);
+
+//CSS:
+:root {
+  --background-color-in: #{$background-light-in};
+  --background-color: #{$background-light};
+  --text-color: #{$text-dark};
+  --shadow: #{$shadow};
+}
+
+body[mood='dark'] {
+  --background-color: #{$background-dark};
+  --background-color-in: #{$background-dark-in};
+  --text-color: #{$text-light};
+}
+
+body [moood='light'] {
+  --background-color: #{$background-light};
+  --background-color-in: #{$background-light-in};
+  --text-color: #{$text-dark};
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  outline: none;
+  text-decoration: none;
+  overflow-anchor: none;
+}
+
+body {
+  font-family: 'Roboto';
+  background-color: var(#{--background-color});
+  transition: 0.2s all ease-in-out;
+}

@@ -1,0 +1,111 @@
+.inputbutton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 5px;
+  gap: 15px;
+  max-width: 440px;
+  width: 100%;
+}
+
+.inputtop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+
+  &__input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(#{--background-color-in});
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: var(#{--shadow});
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 375px;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      transition: all 0.2s ease-in-out;
+      box-shadow: var(#{--shadow});
+    }
+    &::placeholder {
+      opacity: 0.1;
+    }
+  }
+  &__add {
+    width: 25px;
+    height: 25px;
+    color: var(--text-color);
+    opacity: 0.3;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      transition: all 0.2s ease-in-out;
+      opacity: 0.18;
+    }
+    &:active {
+      transform: scale(0.85);
+    }
+  }
+
+  &__button {
+    width: 25px;
+    height: 25px;
+    color: var(--text-color);
+    opacity: 0.3;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      transition: all 0.2s ease-in-out;
+      opacity: 0.18;
+    }
+    &:active {
+      transform: scale(0.85);
+    }
+  }
+
+  &__in {
+    border: none;
+    background-color: transparent;
+    color: var(--text-color);
+    &::placeholder {
+      opacity: 0.4;
+      color: var(--text-color);
+    }
+  }
+
+  &__clear {
+    color: var(--text-color);
+    opacity: 0.4;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      transition: all 0.2s ease-in-out;
+      opacity: 0.2;
+    }
+  }
+}
+
+.line {
+  height: 1px;
+  max-width: 550px;
+  width: 100%;
+  border: none;
+  height: 1px;
+  background-image: linear-gradient(to right, #ffffff06, #d1d1d186, #ffffff06);
+}
+
+.clearall {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  p {
+    color: var(#{--text-color});
+  }
+}

@@ -1,0 +1,41 @@
+.todoitem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 15px;
+  border: transparent;
+
+  &__button {
+    width: 20px;
+    height: 20px;
+    color: var(--text-color);
+    opacity: 0.4;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      transition: all 0.2s ease-in-out;
+      opacity: 0.2;
+    }
+    &:active {
+      transform: scale(0.85);
+    }
+  }
+
+  .buttoncontainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .done {
+    text-decoration: line-through;
+    color: var(--text-color);
+    opacity: 0.3;
+  }
+  .none {
+    color: var(--text-color);
+  }
+}
